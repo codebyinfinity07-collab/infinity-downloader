@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Downloader | All-in-One Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+      <nav>
+        <div class="logo">
+        <img src="images/logo.jpg" alt="logo">
+        <span class="logo-text">Infinity Downloader</span>
+        </div>
+        <Button class="btn">InstallApp</Button>
+
+        <div class="menu-icon" onclick="showMenu()">☰</div>
+
+        <ul id="navLinks">
+            <div class="close-icon" onclick="hideMenu()">✕</div>
+            <li><a class="active">Home</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container1">
+        <header>
+            <h1>Infinity <span>Downloader</span></h1>
+            <p>Download Videos from TikTok, YouTube, & more in HD/4K</p>
+        </header>
+
+        <main class="downloader-box">
+            <div class="input-group">
+                <input type="text" id="videoLink" placeholder="Paste video link here...">
+                <button id="analyzeBtn" onclick="analyzeLink()">Analyze</button>
+            </div>
+
+            <div id="downloadOptions" class="hidden">
+                <h3>Select Quality:</h3>
+                <div class="options-grid">
+                    <button class="opt-btn">Audio (MP3)</button>
+                    <button class="opt-btn">720p (MP4)</button>
+                    <button class="opt-btn">1080p HD</button>
+                    <button class="opt-btn">4K Ultra HD</button>
+                </div>
+                
+                <div class="watermark-toggle">
+                    <label>
+                        <input type="checkbox" id="noWatermark"> No Watermark
+                    </label>
+                </div>
+
+                <button class="dl-main-btn">Start Download</button>
+
+
+<div id="progressContainer" style="display: none; margin-top: 20px; width: 100%;">
+    <p id="progressText" style="color: white; font-size: 14px; margin-bottom: 5px; text-align: center;">Downloading: 0%</p>
+    <div style="width: 100%; background: #222; border-radius: 10px; height: 10px; overflow: hidden;">
+        <div id="progressBar" style="width: 0%; height: 100%; background: #38bdf8; border-radius: 10px; transition: width 0.3s;"></div>
+    </div>
+</div>
+</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Supported: TikTok, YouTube, Facebook, WhatsApp Status & all other types of videos.</p>
+        </footer>
+    </div>
+
+    <script src="java.js"></script>
+
+
+
+
+    <section class="help-section">
+    <div class="container">
+        <header class="help-header">
+            
+            <p>Simple guide to use Infinity Downloader</p>
+        </header>
+
+        <div class="store-card">
+            <i class="fab fa-google-play"></i>
+            <div class="card-text">
+                <h3>Official Android App</h3>
+                <p>Download directly to your gallery with our Play Store app.</p>
+                <a href="#" class="btn-primary">Install App</a>
+            </div>
+        </div>
+
+        <div class="guide-container">
+            <h2 class="section-title">How to Download</h2>
+            <div class="guide-steps">
+                <div class="step">
+                    <span>1</span>
+                    <p><b>Copy Link:</b> Get video URL from TikTok/YouTube.</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <p><b>Analyze:</b> Paste link on Home and hit Analyze.</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <p><b>Save:</b> Select quality and click Download.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-minimal">
+            <h2 class="section-title">Common Questions</h2>
+            <div class="faq-box">
+                <details>
+                    <summary>Where are my videos saved?</summary>
+                    <p>In your device's "Downloads" folder or App Gallery.</p>
+                </details>
+                <details>
+                    <summary>Is it free to use?</summary>
+                    <p>Yes, Infinity Downloader is 100% free for everyone.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="footer-action">
+    
+        </div>
+    </div>
+</section>
+</body>
+</html>

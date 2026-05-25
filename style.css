@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+    margin: 0;
+}
+
+.container1{
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 130px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h1 span {
+    color: #38bdf8;
+}
+
+.downloader-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.hidden { display: none; }
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.opt-btn {
+    background: #334155;
+    color: white;
+}
+
+.dl-main-btn {
+    width: 100%;
+    background: #22c55e;
+    color: white;
+    font-size: 1.1rem;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+    align-items: center;
+    padding: 13px 3%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+}
+.logo img{
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    
+}
+.logo-text{
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color:black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+/* COMPUTER PAR ICONS CHHUPANE KE LIYE */
+.menu-icon,
+.close-icon {
+    display: none;
+}
+
+/* MOBILE SETTINGS (Minimize karne par) */
+@media (max-width: 700px) {
+    .menu-icon {
+        display: block;
+        color: black;
+        font-size: 25px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        /* Sidebar chhupa rahega */
+        width: 200px;
+        height: 100vh;
+        background:#38bdf8;
+        border-radius: 10px;
+        /* Red Sidebar jaisa aapne manga */
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        transition: 0.5s;
+        z-index: 2;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: black;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+}
+.btn{
+    margin-left: auto;
+    margin-right: 15px;
+    
+}
+
+nav ul li a.active{
+    background-color: #0ea5e9;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 8px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #070b14; /* Extra dark theme */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #070b14 100%);
+    position: relative;
+}
+
+/* Background Animated Circles */
+.about-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(14, 165, 233, 0.15);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+    animation: float 10s infinite alternate;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 40px;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Unique Animated Badge */
+.brand-badge {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+    animation: pulse 2s infinite;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ffffff, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+/* Feature Cards with Hover Animation */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #38bdf8;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* CBI Text Glow */
+.cbi-text {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+.back-btn{
+    color:#0ea5e9;
+}
+.cbi-text span {
+    color: #38bdf8;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* 1. Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #050810; /* Dark Theme */
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden; /* Side scroll khatam karne ke liye */
+}
+
+/* 2. Section Wrapper */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top left, #1e293b, #050810);
+    min-height: 100vh;
+    margin-top: 20px;
+}
+
+.container2{ 
+    width: 100%;
+    max-width: 1100px; /* PC par width control karne ke liye */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 3. Header Styling */
+.header-box {
+    margin-bottom: 50px;
+}
+
+.badge {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+}
+
+.contact-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+    background: linear-gradient(to right, #ffffff, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* 4. CEO Grid (Responsive Layout) */
+.ceo-grid {
+    display: grid;
+    /* Desktop par 2 cards, mobile par khud 1 ho jayenge */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* 5. CEO Card Style */
+.ceo-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 40px 25px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ceo-card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-icon {
+    font-size: 50px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.ceo-name {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.title-tag {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* 6. Contact Buttons */
+.contact-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 14px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-weight: 500;
+    width: 100%;
+}
+
+.whatsapp:hover {
+    background: #25D366;
+    transform: scale(1.02);
+}
+
+.email:hover {
+    background: #0ea5e9;
+    transform: scale(1.02);
+}
+
+/* 7. Bottom Navigation */
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* 8. Mobile Adjustments (Extra Responsive) */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+    
+    .ceo-card {
+        padding: 30px 15px;
+        border-radius: 20px;
+    }
+
+    .ceo-name {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* --- Global Minimal Style --- */
+body {
+    background-color: #0b0f1a;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 700px; /* Choti width taake reading asaan ho */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Header */
+.help-header { text-align: center; margin-bottom: 50px; }
+.help-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 10px; }
+.help-header p { color: #38bdf8; font-size: 1.1rem; }
+
+/* Store Card - Simple & Clean */
+.store-card {
+    background: #161e2d;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #1e293b;
+    margin-bottom: 40px;
+}
+
+.store-card i { font-size: 40px; color: #38bdf8; }
+.store-card h3 { margin-bottom: 5px; color: #fff; }
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Steps - No Boxes, Just Text */
+.section-title { font-size: 1.5rem; color: #fff; margin-bottom: 25px; border-bottom: 1px solid #1e293b; padding-bottom: 10px; }
+.step { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.step span {
+    background: #38bdf8;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* FAQ - Minimal Dropdown */
+details { background: #161e2d; padding: 15px; border-radius: 10px; margin-bottom: 10px; cursor: pointer; }
+summary { font-weight: 600; color: #38bdf8; }
+details p { margin-top: 10px; color: #94a3b8; font-size: 0.95rem; }
+
+/* Footer */
+.footer-action { text-align: center; margin-top: 50px; }
+.footer-action a { color:#0ea5e9; text-decoration: none; }
+.footer-action2{ color:#38bdf8; margin-top: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
