@@ -48,7 +48,7 @@ document.querySelector('.dl-main-btn').addEventListener('click', async function(
     progressText.innerText = "Downloading started...";
 
     // Backend URL
-    const serverUrl =`https://infinity-downloader-nu.vercel.app/download?url=${encodeURIComponent(videoLink)}&quality=${selectedQuality}&watermark=${noWatermark ? 'false' : 'true'}`;
+    const serverUrl =`https://infinity-downloader07-mu.vercel.app/download?url=${encodeURIComponent(videoLink)}&quality=${selectedQuality}&watermark=${noWatermark ? 'false' : 'true'}`;
 
     try {
         const response = await fetch(serverUrl);
